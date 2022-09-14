@@ -67,6 +67,48 @@
       "name": "Edgeworker_Staging",
       "groupId": 175502,
       "resourceTierId": 200
+    },
+    {
+      "edgeWorkerId": 56158,
+      "name": "test-poc-3",
+      "groupId": 171151,
+      "resourceTierId": 200
+    },
+    {
+      "edgeWorkerId": 56159,
+      "name": "test-poc-1",
+      "groupId": 171151,
+      "resourceTierId": 200
+    },
+    {
+      "edgeWorkerId": 56160,
+      "name": "test-poc-2",
+      "groupId": 171151,
+      "resourceTierId": 200
+    },
+    {
+      "edgeWorkerId": 56161,
+      "name": "test-poc-4",
+      "groupId": 171151,
+      "resourceTierId": 200
+    },
+    {
+      "edgeWorkerId": 56162,
+      "name": "test-poc-5",
+      "groupId": 171151,
+      "resourceTierId": 200
+    },
+    {
+      "edgeWorkerId": 56163,
+      "name": "test-poc-11",
+      "groupId": 171151,
+      "resourceTierId": 200
+    },
+    {
+      "edgeWorkerId": 56164,
+      "name": "test-poc-12",
+      "groupId": 171151,
+      "resourceTierId": 200
     }
   ]
 }
