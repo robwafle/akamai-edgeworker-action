@@ -1,6 +1,8 @@
 #!/bin/bash
 set -o pipefail
 
+echo -e "${EDGERC}"
+
 # Create /root/.edgerc file from env variable
 echo -e "${EDGERC}" > ~/.edgerc
 
@@ -9,9 +11,13 @@ edgeworkersName=$1
 network=$2
 groupid=$3
 
+echo $edgeworkersName
+echo $network
+echo $groupid
+
 echo ${edgeworkersName}
-response=$(akamai edgeworkers list-ids --json --section edgeworkers --edgerc ~/.edgerc)
-edgeworkerList=$( cat ${response} )
+response=$(akamai edgeworkers list-ids --json edgeworkers.json --section edgeworkers --edgerc ~/.edgerc)
+edgeworkerList=$( cat edgeworkers.json )
 edgeworkersID=$(echo ${edgeworkerList} | jq --arg edgeworkersName "${edgeworkersName}" '.data[] | select(.name == $edgeworkersName) | .edgeWorkerId')
 edgeworkersgroupIude=$(echo $edgeworkerList | jq --arg edgeworkersName "$edgeworkersName" '.data[] | select(.name == $edgeworkersName) | .groupId')
 
