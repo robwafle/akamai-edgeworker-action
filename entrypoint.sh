@@ -2,11 +2,11 @@
 set -o pipefail
 
 echo "------------"
-echo -e "${INPUT_EDGERC}"
+echo -e "${EDGERC}"
 echo "------------"
 
 # Create /root/.edgerc file from env variable
-echo -e "${INPUT_EDGERC}" > ~/.edgerc
+echo -e "${EDGERC}" > ~/.edgerc
 
 #  Set Variables
 edgeworkersName=$1

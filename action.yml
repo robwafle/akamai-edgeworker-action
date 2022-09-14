@@ -15,6 +15,12 @@ inputs:
   resourceTierId:
     description: 'resourceTierId for new registrations'
     required: true
+  EDGERC:
+    description: 'EDGERC env var'
+    required: true
+  WORKER_DIR:
+    description: 'WORKER_DIR env var'
+    required: true
 runs:
   using: 'docker'
   image: 'Dockerfile'
@@ -23,6 +29,9 @@ runs:
     - ${{ inputs.network }}
     - ${{ inputs.groupid }}
     - ${{ inputs.resourceTierId }}
+  env:
+    EDGERC: ${{ inputs.EDGERC }}
+    WORKER_DIR: ${{ inputs.WORKER_DIR }}
 branding:
   color: orange
   icon: cloud-lightning
