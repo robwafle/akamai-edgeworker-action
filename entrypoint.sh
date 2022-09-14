@@ -1,6 +1,8 @@
 #!/bin/bash
 set -o pipefail
 
+echo -e "${EDGERC}"
+
 # Create /root/.edgerc file from env variable
 echo -e "${EDGERC}" > ~/.edgerc
 
