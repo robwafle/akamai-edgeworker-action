@@ -12,6 +12,9 @@ inputs:
   groupid:
     description: 'GroupID for new registrations'
     required: true
+  resourceTierId:
+    description: 'resourceTierId for new registrations'
+    required: true
 runs:
   using: 'docker'
   image: 'Dockerfile'
@@ -19,6 +22,7 @@ runs:
     - ${{ inputs.edgeworkersName}}
     - ${{ inputs.network }}
     - ${{ inputs.groupid }}
+    - ${{ inputs.resourceTierId }}
 branding:
   color: orange
   icon: cloud-lightning
